@@ -1,0 +1,32 @@
+package com.mtdev.linkscrollview;
+
+import android.widget.HorizontalScrollView;
+
+/**
+ * Created by MaoTong on 2016/12/7.
+ * QQ:974291433
+ */
+
+public interface ScrollViewListener {
+    /**
+     * The view is not scrolling. Note navigating the list using the trackball counts as
+     * being in the idle state since these transitions are not animated.
+     */
+    int SCROLL_STATE_IDLE = 0;
+
+    /**
+     * The user is scrolling using touch, and their finger is still on the screen
+     */
+    int SCROLL_STATE_TOUCH_SCROLL = 1;
+
+    /**
+     * The user had previously been scrolling using touch and had performed a fling. The
+     * animation is now coasting to a stop
+     */
+    int SCROLL_STATE_FLING = 2;
+
+    int SCROLL_STATE_SOON_IDLE = 3;
+
+    void onScrollStateChanged(HorizontalScrollView view, int scrollState, int index);
+    void onScrollChanged(HorizontalScrollView scrollView, boolean isTouchScroll, int x, int y, int oldx, int oldy);
+}
