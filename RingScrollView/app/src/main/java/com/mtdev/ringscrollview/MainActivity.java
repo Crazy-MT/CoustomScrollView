@@ -2,6 +2,8 @@ package com.mtdev.ringscrollview;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.ViewTreeObserver;
 import android.widget.HorizontalScrollView;
 
 import com.mtdev.ringscrollview.view.BottomHorizontalScrollView;
@@ -10,6 +12,7 @@ import com.mtdev.ringscrollview.view.TopHorizontalScrollView;
 
 public class MainActivity extends AppCompatActivity implements ScrollViewListener {
 
+    private static final String TAG = "MainActivity";
     private TopHorizontalScrollView mTopHSV;
     private BottomHorizontalScrollView mBottomHSV;
 
@@ -27,6 +30,14 @@ public class MainActivity extends AppCompatActivity implements ScrollViewListene
 
         mTopHSV.setScrollViewListener(this);
         mBottomHSV.setScrollViewListener(this);
+
+        mBottomHSV.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                mBottomHSV.scrollBy(mBottomHSV.getImageWidth() * mBottomHSV.getShowChildCount()  , 0);
+                Log.e(TAG, "onGlobalLayout: " + mBottomHSV.getImageWidth() * mBottomHSV.getShowChildCount());
+            }
+        });
     }
 
     @Override
@@ -37,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements ScrollViewListene
     @Override
     public void onScrollChanged(HorizontalScrollView scrollView, int x, int y, int oldx, int oldy) {
         if (scrollView == mTopHSV) {
-            mBottomHSV.scrollBy(oldx - x, y);
+            mBottomHSV.scrollBy((oldx - x) / BottomHorizontalScrollView.BOTTOM_PARAM_WIDTH_FACTOR, y);
         }
 
        /* if (scrollView == mBottomHSV) {

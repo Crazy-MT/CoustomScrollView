@@ -53,7 +53,6 @@ public class LoopScrollView extends HorizontalScrollView {
         setHorizontalScrollBarEnabled(false);
         ViewConfiguration configuration = ViewConfiguration.get(context);
         mMaximumVelocity = configuration.getScaledMaximumFlingVelocity();
-        mImageWidth = Utils.getWinWidth(context);
     }
 
     @Override
@@ -114,7 +113,6 @@ public class LoopScrollView extends HorizontalScrollView {
                     @Override
                     public void onAnimationEnd(Animator animation) {
                         mScrollState = ScrollViewListener.SCROLL_STATE_IDLE;
-                        Log.e(TAG, "onAnimationEnd: " );
                     }
 
                     @Override
@@ -205,6 +203,7 @@ public class LoopScrollView extends HorizontalScrollView {
         LinearLayout imageLayout = (LinearLayout) getChildAt(0);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(Utils.getWinWidth(mContext), Utils.getWinHeight(mContext));
         mShowChildCount = heros.length;
+        mImageWidth = params.width;
         for (int i = 0; i < heros.length * 2; ++i) {
             ImageView iv = new ImageView(mContext);
             iv.setLayoutParams(params);
@@ -212,5 +211,21 @@ public class LoopScrollView extends HorizontalScrollView {
             iv.setPadding(100, 0, 100, 0);
             imageLayout.addView(iv);
         }
+    }
+
+    public int getShowChildCount() {
+        return mShowChildCount;
+    }
+
+    public void setShowChildCount(int showChildCount) {
+        mShowChildCount = showChildCount;
+    }
+
+    public int getImageWidth() {
+        return mImageWidth;
+    }
+
+    public void setImageWidth(int imageWidth) {
+        mImageWidth = imageWidth;
     }
 }
