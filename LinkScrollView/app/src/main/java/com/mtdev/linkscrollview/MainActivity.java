@@ -17,12 +17,8 @@ public class MainActivity extends AppCompatActivity implements ScrollViewListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        int[] heros = {R.mipmap.hero_chengjisihan, R.mipmap.hero_daqiao, R.mipmap.hero_donghuangtaiyi, R.mipmap.hero_huangzhong, R.mipmap.hero_neza, R.mipmap.hero_taiyizhenren, R.mipmap.hero_yangjian, R.mipmap.hero_zhugeliang};
         mTopHSV = (TopHorizontalScrollView) findViewById(R.id.id_top);
         mBottomHSV = (BottomHorizontalScrollView) findViewById(R.id.id_bottom);
-
-        mTopHSV.addImageViewFromRes(heros);
-        mBottomHSV.addImageViewFromRes(heros);
 
         mTopHSV.setScrollViewListener(this);
         mBottomHSV.setScrollViewListener(this);
@@ -36,11 +32,8 @@ public class MainActivity extends AppCompatActivity implements ScrollViewListene
     @Override
     public void onScrollChanged(HorizontalScrollView scrollView, int x, int y, int oldx, int oldy) {
         if (scrollView == mTopHSV) {
-            mBottomHSV.scrollBy(oldx - x, y);
+            mBottomHSV.scrollTo(x, y);
         }
 
-       /* if (scrollView == mBottomHSV) {
-            mTopHSV.scrollBy(oldx - x, y);
-        }*/
     }
 }

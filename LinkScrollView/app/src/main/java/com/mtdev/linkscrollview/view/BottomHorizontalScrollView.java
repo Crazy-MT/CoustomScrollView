@@ -11,7 +11,7 @@ import com.mtdev.linkscrollview.ScrollViewListener;
  * Created by yoush on 2017/4/8.
  */
 
-public class BottomHorizontalScrollView extends LoopScrollView {
+public class BottomHorizontalScrollView extends HorizontalScrollView {
 
     private static final String TAG = "BottomHorizontalScrollV";
     private Context mContext;
@@ -41,14 +41,8 @@ public class BottomHorizontalScrollView extends LoopScrollView {
     @Override
     protected void onScrollChanged(int l, int t, int oldl, int oldt) {
         super.onScrollChanged(l, t, oldl, oldt);
-        if (mScrollViewListener != null){
+        if (mScrollViewListener != null) {
             mScrollViewListener.onScrollChanged(this, l, t, oldl, oldt);
-        }
-
-        if (l <= mImageWidth * mShowChildCount/2) {
-            scrollBy(mImageWidth * mShowChildCount, 0);
-        } else if (l >= mImageWidth * (mShowChildCount / 2 + mShowChildCount)) {
-            scrollBy(-mImageWidth * mShowChildCount, 0);
         }
     }
 }

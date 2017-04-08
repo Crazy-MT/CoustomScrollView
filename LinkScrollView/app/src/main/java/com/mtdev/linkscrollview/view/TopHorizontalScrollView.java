@@ -11,7 +11,7 @@ import com.mtdev.linkscrollview.ScrollViewListener;
  * Created by yoush on 2017/4/8.
  */
 
-public class TopHorizontalScrollView extends LoopScrollView {
+public class TopHorizontalScrollView extends HorizontalScrollView {
 
     private static final String TAG = "TopHorizontalScrollView";
     private Context mContext;
@@ -37,8 +37,6 @@ public class TopHorizontalScrollView extends LoopScrollView {
             mScrollViewListener.onScrollChanged(this, l, t, oldl, oldt);
         }
     }
-
-
 
     public ScrollViewListener getScrollViewListener() {
         return mScrollViewListener;

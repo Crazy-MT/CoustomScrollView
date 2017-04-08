@@ -16,10 +16,62 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:orientation="horizontal"
+            android:layout_height="match_parent"
             android:gravity="center"
-            android:layout_height="match_parent">
+            android:orientation="horizontal">
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:src="@mipmap/hero_chengjisihan"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:src="@mipmap/hero_daqiao"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:src="@mipmap/hero_donghuangtaiyi"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:src="@mipmap/hero_huangzhong"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:src="@mipmap/hero_neza"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:src="@mipmap/hero_taiyizhenren"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:src="@mipmap/hero_yangjian"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:src="@mipmap/hero_zhugeliang"/>
         </LinearLayout>
 
     </com.mtdev.linkscrollview.view.TopHorizontalScrollView>
@@ -32,10 +84,62 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:orientation="horizontal"
+            android:layout_height="match_parent"
             android:gravity="center"
-            android:layout_height="match_parent">
+            android:orientation="horizontal">
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:src="@mipmap/hero_chengjisihan"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:src="@mipmap/hero_daqiao"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:src="@mipmap/hero_donghuangtaiyi"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:src="@mipmap/hero_huangzhong"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:src="@mipmap/hero_neza"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:src="@mipmap/hero_taiyizhenren"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:src="@mipmap/hero_yangjian"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:src="@mipmap/hero_zhugeliang"/>
         </LinearLayout>
     </com.mtdev.linkscrollview.view.BottomHorizontalScrollView>
 </LinearLayout>
