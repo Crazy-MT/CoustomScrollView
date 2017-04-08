@@ -25,8 +25,6 @@ public interface ScrollViewListener {
      */
     int SCROLL_STATE_FLING = 2;
 
-    int SCROLL_STATE_SOON_IDLE = 3;
-
     void onScrollStateChanged(HorizontalScrollView view, int scrollState, int index);
-    void onScrollChanged(HorizontalScrollView scrollView, boolean isTouchScroll, int x, int y, int oldx, int oldy);
+    void onScrollChanged(HorizontalScrollView scrollView, int x, int y, int oldx, int oldy);
 }
