@@ -1,8 +1,8 @@
-# CoustomScrollView
+# LoopScrollView
 ## 描述
-
+可以循环滚动的 ScrollView , 仿 ViewPager 效果。
 ## 效果
-
+[LoopScrollView](https://github.com/MTAndroidDev/CoustomScrollView/blob/master/gif/LoopScrollView.gif)
 ## 如何用？
 如系统控件 HorizontalScrollView 一样使用，需要 LineraLayout 作为子控件。
 ```
