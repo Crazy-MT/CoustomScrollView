@@ -1,6 +1,6 @@
 # LoopScrollView
 ## 描述
-可以循环滚动的 ScrollView , 仿 ViewPager 效果。
+可以循环滚动的 ScrollView 。
 ## 效果
 ![LoopScrollView](https://github.com/MTAndroidDev/CoustomScrollView/blob/master/gif/LoopScrollView.gif)
 ## 如何用？
